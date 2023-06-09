@@ -372,6 +372,7 @@
 "Assets/Scripts/MOVescenario.cs"
 "Assets/Scripts/MOVobstaculos.cs"
 "Assets/Scripts/PosicionDeBolita.cs"
+"Assets/Scripts/ScoreController.cs"
 "Assets/Space.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Moverse : MonoBehaviour
 {
-
+    public ScoreController scoreController;
     public int VelocidadHorizontal;
     Rigidbody rb;
 
@@ -30,11 +30,19 @@ public class Moverse : MonoBehaviour
 
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider col)
     {
-        if (other.gameObject.CompareTag("Obstaculo"))
+        if (col.gameObject.CompareTag("Obstaculo"))
         {
             SceneManager.LoadScene(1);
         }
+
+        if (col.gameObject.CompareTag("Civil"))
+        {
+            scoreController.UpdateScore(1);
+            Destroy(col.gameObject);
+        }
+
     }
+    
 }
